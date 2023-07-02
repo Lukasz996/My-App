@@ -1,11 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux';
+import { Store } from 'redux';
+import rootReducer from './reducers'; // Zaimportuj swój główny reducer (lub kombinację reducerów)
 
+const store = Store(rootReducer);
 
-const reducer = combineReducers({
-phonebook
-})
-
-export const store = configureStore({
-  reducer,
-});
+export default store;
